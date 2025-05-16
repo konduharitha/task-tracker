@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Task Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>Task Tracker</h1>
+      <nav class="action-buttons">
+        <button data-tool="task-list" class="fade-in">Task List</button>
+        <button data-tool="sticky-notes" class="fade-in">Sticky Notes</button>
+        <button data-tool="pomodoro" class="fade-in">Pomodoro</button>
+      </nav>
+    </header>
+
+    <main>
+      <section id="task-list" class="tool-section fade-in">
+        <h2>Task List</h2>
+        <!-- Task list content will be added here -->
+      </section>
+
+      <section id="sticky-notes" class="tool-section hidden fade-in">
+        <h2>Sticky Notes</h2>
+        <!-- Sticky notes content will be added here -->
+      </section>
+
+      <section id="pomodoro" class="tool-section hidden fade-in">
+        <h2>Pomodoro Timer</h2>
+        <!-- Pomodoro content will be added here -->
+      </section>
+    </main>
+  </div>
+  <script src="script.js" defer></script>
+</body>
+</html>

@@ -19,8 +19,86 @@
 
     <main>
       <section id="task-list" class="tool-section fade-in">
-        <h2>Task List</h2>
-        <!-- Task list content will be added here -->
+        <div class="task-form">
+          <h2>Task List</h2>
+          <form id="add-task-form">
+            <input type="text" id="task-input" placeholder="Enter task title" required />
+            <textarea id="task-description" placeholder="Enter task description"></textarea>
+            <select id="priority-select" required>
+              <option value="">Select Priority</option>
+              <option value="low">Low Priority</option>
+              <option value="medium">Medium Priority</option>
+              <option value="high">High Priority</option>
+            </select>
+            <select id="task-status" required>
+              <option value="">Select Status</option>
+              <option value="todo">To Do</option>
+              <option value="in-progress">In Progress</option>
+              <option value="completed">Completed</option>
+            </select>
+            <button type="submit">Add Task</button>
+          </form>
+        </div>
+
+        <div id="progress-container" class="fade-in">
+          <h3>Progress Overview</h3>
+          <div class="progress-stats">
+            <div class="stat-item">
+              <span class="stat-label">Total Tasks:</span>
+              <span id="total-tasks">0</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-label">Completed:</span>
+              <span id="completed-tasks">0</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-label">Progress:</span>
+              <span id="progress-text">0%</span>
+            </div>
+          </div>
+          <div class="progress-bar">
+            <div id="progress-fill" style="width: 0%"></div>
+          </div>
+        </div>
+
+        <div class="task-filters fade-in">
+          <select id="filter-priority">
+            <option value="all">All Priorities</option>
+            <option value="high">High Priority</option>
+            <option value="medium">Medium Priority</option>
+            <option value="low">Low Priority</option>
+          </select>
+          <select id="filter-status">
+            <option value="all">All Status</option>
+            <option value="todo">To Do</option>
+            <option value="in-progress">In Progress</option>
+            <option value="completed">Completed</option>
+          </select>
+        </div>
+
+        <div class="task-list" id="tasks-container">
+          <!-- Tasks will be dynamically added here -->
+        </div>
+
+        <!-- Task Card Template -->
+        <template id="task-template">
+          <div class="task-card fade-in">
+            <div class="task-header">
+              <h3 class="task-title"></h3>
+              <span class="priority-badge"></span>
+            </div>
+            <p class="task-description"></p>
+            <div class="task-meta">
+              <span class="status-badge"></span>
+              <span class="date-created"></span>
+            </div>
+            <div class="action-buttons">
+              <button class="btn-edit">Edit</button>
+              <button class="btn-delete">Delete</button>
+              <button class="btn-complete">Complete</button>
+            </div>
+          </div>
+        </template>
       </section>
 
       <section id="sticky-notes" class="tool-section hidden fade-in">

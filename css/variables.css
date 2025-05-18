@@ -1,0 +1,38 @@
+/* Global Variables */
+:root {
+    /* Colors - Primary Palette */
+    --primary-color: #4a90e2;
+    --secondary-color: #f5f6fa;
+    --text-color: #2c3e50;
+    
+    /* Colors - Status */
+    --danger-color: #e74c3c;
+    --success-color: #2ecc71;
+    --warning-color: #ffc107;
+    
+    /* Sticky Note Colors */
+    --note-yellow: #fff9c4;
+    --note-pink: #f8bbd0;
+    --note-blue: #bbdefb;
+    --note-green: #c8e6c9;
+    
+    /* Task Status Colors */
+    --status-todo-bg: #f1f1f1;
+    --status-todo-text: #666;
+    --status-progress-bg: #fff3cd;
+    --status-progress-text: #856404;
+    --status-completed-bg: #d4edda;
+    --status-completed-text: #155724;
+    
+    /* Layout */
+    --border-radius: 8px;
+    --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --transition-speed: 0.3s;
+    
+    /* Spacing */
+    --spacing-xs: 4px;
+    --spacing-sm: 8px;
+    --spacing-md: 15px;
+    --spacing-lg: 20px;
+    --spacing-xl: 30px;
+} 

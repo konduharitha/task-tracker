@@ -5,13 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Task Tracker</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="css/stickyNotes.css" />
+  <link rel="stylesheet" href="css/taskManager.css" />
 </head>
 <body>
   <div class="container">
     <header class="header">
       <h1>Task Tracker</h1>
       <nav class="action-buttons">
-        <button data-tool="task-list" class="fade-in">Task List</button>
+        <button data-tool="task-list" class="fade-in active">Task List</button>
         <button data-tool="sticky-notes" class="fade-in">Sticky Notes</button>
         <button data-tool="pomodoro" class="fade-in">Pomodoro</button>
       </nav>
@@ -120,10 +122,13 @@
 
       <section id="pomodoro" class="tool-section hidden fade-in">
         <h2>Pomodoro Timer</h2>
-        <!-- Pomodoro content will be added here -->
+        <!-- Pomodoro content will be moved to a separate file -->
       </section>
     </main>
   </div>
-  <script src="script.js" defer></script>
+  <script src="script.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/taskManager.js"></script>
+  <script src="js/stickyNotes.js"></script>
 </body>
 </html>

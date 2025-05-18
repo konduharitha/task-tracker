@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="css/stickyNotes.css" />
   <link rel="stylesheet" href="css/taskManager.css" />
   <link rel="stylesheet" href="css/pomodoro.css" />
+  <link rel="stylesheet" href="css/markdown.css" />
 </head>
 <body>
   <div class="container">
@@ -17,6 +18,7 @@
         <button data-tool="task-list" class="fade-in active">Task List</button>
         <button data-tool="sticky-notes" class="fade-in">Sticky Notes</button>
         <button data-tool="pomodoro" class="fade-in">Pomodoro</button>
+        <button data-tool="markdown" class="fade-in">Markdown Notes</button>
       </nav>
     </header>
 
@@ -143,6 +145,30 @@
           <div class="timer-status">Time to focus!</div>
         </div>
       </section>
+
+      <section id="markdown" class="tool-section hidden fade-in">
+        <div class="markdown-section">
+          <h2>Markdown Notes</h2>
+          <div class="markdown-controls">
+            <input type="text" id="filename-input" placeholder="Enter filename (e.g., notes.md)" />
+            <button id="save-markdown">Save to File</button>
+            <input type="file" id="load-markdown" accept=".md,.txt" style="display: none;" />
+            <button id="load-markdown-btn">Load from File</button>
+          </div>
+          <div class="markdown-stats">
+            <div class="stat">Words: <span id="word-count" class="stat-value">0</span></div>
+            <div class="stat">Characters: <span id="char-count" class="stat-value">0</span></div>
+          </div>
+          <div class="markdown-container">
+            <div class="markdown-editor">
+              <textarea id="markdown-editor" placeholder="Write your Markdown here..."></textarea>
+            </div>
+            <div id="markdown-preview" class="markdown-preview">
+              <!-- Preview will be rendered here -->
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
   </div>
   <script src="script.js"></script>
@@ -150,5 +176,6 @@
   <script src="js/taskManager.js"></script>
   <script src="js/stickyNotes.js"></script>
   <script src="js/pomodoro.js"></script>
+  <script type="module" src="js/markdown.js"></script>
 </body>
 </html>

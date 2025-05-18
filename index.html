@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="css/stickyNotes.css" />
   <link rel="stylesheet" href="css/taskManager.css" />
+  <link rel="stylesheet" href="css/pomodoro.css" />
 </head>
 <body>
   <div class="container">
@@ -122,7 +123,25 @@
 
       <section id="pomodoro" class="tool-section hidden fade-in">
         <h2>Pomodoro Timer</h2>
-        <!-- Pomodoro content will be moved to a separate file -->
+        <div class="pomodoro-container">
+          <div class="timer-mode">
+            <button class="active" data-mode="pomodoro" data-time="25">Pomodoro</button>
+            <button data-mode="shortBreak" data-time="5">Short Break</button>
+            <button data-mode="longBreak" data-time="15">Long Break</button>
+          </div>
+          <div class="timer-progress">
+            <svg class="timer-progress-circle" width="300" height="300" viewBox="0 0 300 300">
+              <circle class="progress-bg" cx="150" cy="150" r="145" />
+              <circle class="progress-bar" cx="150" cy="150" r="145" />
+            </svg>
+            <div class="timer-display">25:00</div>
+          </div>
+          <div class="timer-controls">
+            <button class="start">Start</button>
+            <button class="reset">Reset</button>
+          </div>
+          <div class="timer-status">Time to focus!</div>
+        </div>
       </section>
     </main>
   </div>
@@ -130,5 +149,6 @@
   <script src="js/navigation.js"></script>
   <script src="js/taskManager.js"></script>
   <script src="js/stickyNotes.js"></script>
+  <script src="js/pomodoro.js"></script>
 </body>
 </html>

@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="css/pomodoro.css" />
   <link rel="stylesheet" href="css/markdown.css" />
   <link rel="stylesheet" href="css/calendar.css" />
+  <link rel="stylesheet" href="css/jsonViewer.css" />
 </head>
 <body>
   <div class="container">
@@ -21,6 +22,7 @@
         <button data-tool="calendar" class="fade-in">Calendar</button>
         <button data-tool="pomodoro" class="fade-in">Pomodoro</button>
         <button data-tool="markdown" class="fade-in">Markdown Notes</button>
+        <button data-tool="json-viewer" class="fade-in">JSON Viewer</button>
       </nav>
     </header>
 
@@ -247,6 +249,26 @@
           </div>
         </div>
       </section>
+
+      <section id="json-viewer" class="tool-section hidden fade-in">
+        <h2>JSON Viewer/Editor</h2>
+        <div class="json-controls">
+          <div class="input-controls">
+            <button id="load-json-file" class="control-btn">Load JSON File</button>
+            <button id="save-json-file" class="control-btn">Save JSON</button>
+            <button id="format-json" class="control-btn">Format JSON</button>
+            <button id="collapse-all" class="control-btn">Collapse All</button>
+            <button id="expand-all" class="control-btn">Expand All</button>
+          </div>
+          <div class="json-input-area">
+            <textarea id="json-input" placeholder="Paste your JSON here..."></textarea>
+            <div id="json-error" class="error-message"></div>
+          </div>
+        </div>
+        <div class="json-viewer-container">
+          <div id="json-tree" class="json-tree"></div>
+        </div>
+      </section>
     </main>
   </div>
   <script src="script.js"></script>
@@ -257,5 +279,6 @@
   <script type="module" src="js/markdown.js"></script>
   <script src="js/calendar.js"></script>
   <script src="js/timezoneConverter.js"></script>
+  <script src="js/jsonViewer.js"></script>
 </body>
 </html>
